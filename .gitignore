@@ -3,3 +3,9 @@
 node_modules
 dist
 .claude
+*.ps1
+*.bat
+player_tmp.js
+1773*-player-script.js
+worker/.wrangler
+package-lock.json

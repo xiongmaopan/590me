@@ -1137,7 +1137,7 @@
             <div class="download-box">
                 <div class="input-group">
                     <input type="url" id="videoUrl" class="url-input" placeholder="Paste video URL here..." data-placeholder-en="Paste video URL here..." data-placeholder-zh="粘贴视频链接...">
-                    <button id="parseBtn" class="btn-primary" data-en="Download" data-zh="下载">Download</button>
+                    <button id="parseBtn" class="btn-primary" data-en="Parse" data-zh="解析">Parse</button>
                 </div>
             </div>
             
@@ -1669,63 +1669,75 @@
             });
         });
         
-        // API Configuration
-        const API_BASE_URL = window.location.hostname === 'localhost' 
-            ? 'http://localhost:3000/api' 
-            : 'https://590me-cky9iz38m-cheaks-projects.vercel.app/api';
-        
-        // Parse video function
+        // YouTube video parsing via 590.me API (yt-dlp approach on CF Workers)
+        const API_URL = 'https://590me-api.283330222.workers.dev/api/parse';
+
+        function extractVideoId(url) {
+            const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
+            return m ? m[1] : null;
+        }
+
         async function parseVideo() {
             const urlInput = document.getElementById('videoUrl');
             const parseBtn = document.getElementById('parseBtn');
             const loadingState = document.getElementById('loadingState');
             const errorState = document.getElementById('errorState');
             const videoResult = document.getElementById('videoResult');
-            
+
             const url = urlInput.value.trim();
-            
+
             if (!url) {
                 urlInput.focus();
                 urlInput.style.borderColor = 'var(--accent)';
-                setTimeout(() => {
-                    urlInput.style.borderColor = '';
-                }, 1000);
+                setTimeout(() => { urlInput.style.borderColor = ''; }, 1000);
                 return;
             }
-            
-            // Reset states
+
+            const videoId = extractVideoId(url);
+            if (!videoId) {
+                errorState.style.display = 'flex';
+                document.getElementById('errorMessage').textContent =
+                    document.documentElement.lang === 'zh-CN' ? '请输入有效的YouTube链接' : 'Please enter a valid YouTube URL';
+                return;
+            }
+
             errorState.style.display = 'none';
             videoResult.style.display = 'none';
             loadingState.style.display = 'flex';
             parseBtn.disabled = true;
             parseBtn.textContent = document.documentElement.lang === 'zh-CN' ? '解析中...' : 'Parsing...';
-            
+
             try {
-                const response = await fetch(`${API_BASE_URL}/parse`, {
+                const response = await fetch(API_URL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ url })
                 });
-                
-                const data = await response.json();
-                
-                if (!data.success) {
-                    throw new Error(data.error || 'Failed to parse video');
+                const result = await response.json();
+
+                if (!result.success) {
+                    throw new Error(result.error || 'Failed to parse video');
                 }
-                
-                // Display result
-                displayVideoResult(data);
-                
+
+                if (!result.formats || result.formats.length === 0) {
+                    throw new Error('No downloadable formats found');
+                }
+
+                displayVideoResult(result);
+
             } catch (error) {
                 console.error('Parse error:', error);
                 errorState.style.display = 'flex';
-                document.getElementById('errorMessage').textContent = error.message;
+                const isZh = document.documentElement.lang === 'zh-CN';
+                let msg = error.message;
+                if (msg.includes('Failed to fetch') || msg.includes('NetworkError')) {
+                    msg = isZh ? '网络错误，请稍后重试' : 'Network error, please try again';
+                }
+                document.getElementById('errorMessage').textContent = msg;
             } finally {
                 loadingState.style.display = 'none';
                 parseBtn.disabled = false;
-                parseBtn.textContent = document.documentElement.lang === 'zh-CN' ? '下载' : 'Download';
+                parseBtn.textContent = document.documentElement.lang === 'zh-CN' ? '解析' : 'Parse';
             }
         }
         
@@ -1736,13 +1748,11 @@
             const videoUploader = document.getElementById('videoUploader');
             const videoDuration = document.getElementById('videoDuration');
             const formatList = document.getElementById('formatList');
-            
-            // Set video info
+
             videoThumbnail.src = data.thumbnail || '';
             videoTitle.textContent = data.title || 'Unknown';
             videoUploader.textContent = data.uploader || '';
-            
-            // Format duration
+
             if (data.duration) {
                 const mins = Math.floor(data.duration / 60);
                 const secs = Math.floor(data.duration % 60);
@@ -1750,44 +1760,83 @@
             } else {
                 videoDuration.style.display = 'none';
             }
-            
-            // Generate format list
+
             formatList.innerHTML = '';
-            
+            const isZh = document.documentElement.lang === 'zh-CN';
+
             if (data.formats && data.formats.length > 0) {
-                data.formats.forEach(format => {
-                    const formatItem = document.createElement('div');
-                    formatItem.className = 'format-item';
-                    
-                    const sizeText = format.size 
-                        ? `(${(format.size / 1024 / 1024).toFixed(1)} MB)` 
-                        : '';
-                    
-                    formatItem.innerHTML = `
-                        <div class="format-info">
-                            <span class="format-quality">${format.quality}</span>
-                            <div class="format-meta">
-                                <span>${format.resolution}</span>
-                                <span>${format.ext.toUpperCase()}</span>
-                                <span>${sizeText}</span>
-                            </div>
-                        </div>
-                        <a href="${format.url}" 
-                           class="format-download" 
-                           target="_blank"
-                           download="${data.title}.${format.ext}">
-                            ${document.documentElement.lang === 'zh-CN' ? '下载' : 'Download'}
-                        </a>
-                    `;
-                    
-                    formatList.appendChild(formatItem);
-                });
+                const videoFormats = data.formats.filter(f => f.type === 'video');
+                const videoOnlyFormats = data.formats.filter(f => f.type === 'video_only');
+                const audioFormats = data.formats.filter(f => f.type === 'audio');
+
+                if (videoFormats.length > 0) {
+                    const videoHeader = document.createElement('div');
+                    videoHeader.style.cssText = 'font-weight:600;margin-bottom:8px;color:var(--text-primary);font-size:14px;';
+                    videoHeader.textContent = isZh ? '🎬 视频（含音频）' : '🎬 Video (with audio)';
+                    formatList.appendChild(videoHeader);
+
+                    videoFormats.forEach(format => {
+                        formatList.appendChild(createFormatItem(format, data.title, isZh));
+                    });
+                }
+
+                if (videoOnlyFormats.length > 0) {
+                    const voHeader = document.createElement('div');
+                    voHeader.style.cssText = 'font-weight:600;margin:16px 0 8px;color:var(--text-primary);font-size:14px;';
+                    voHeader.textContent = isZh ? '📹 高清视频（无音频）' : '📹 HD Video (no audio)';
+                    formatList.appendChild(voHeader);
+
+                    videoOnlyFormats.forEach(format => {
+                        formatList.appendChild(createFormatItem(format, data.title, isZh));
+                    });
+                }
+
+                if (audioFormats.length > 0) {
+                    const audioHeader = document.createElement('div');
+                    audioHeader.style.cssText = 'font-weight:600;margin:16px 0 8px;color:var(--text-primary);font-size:14px;';
+                    audioHeader.textContent = isZh ? '🎵 纯音频' : '🎵 Audio only';
+                    formatList.appendChild(audioHeader);
+
+                    audioFormats.forEach(format => {
+                        formatList.appendChild(createFormatItem(format, data.title, isZh));
+                    });
+                }
             } else {
                 formatList.innerHTML = '<p style="color: var(--text-tertiary); text-align: center;">No downloadable formats found.</p>';
             }
-            
+
             videoResult.style.display = 'block';
             videoResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function createFormatItem(format, title, isZh) {
+            const formatItem = document.createElement('div');
+            formatItem.className = 'format-item';
+
+            const sizeText = format.size
+                ? `${(format.size / 1024 / 1024).toFixed(1)} MB`
+                : '';
+
+            const icon = format.type === 'audio' ? '♪' : '▶';
+            const fpsText = format.fps && format.fps > 30 ? ` ${format.fps}fps` : '';
+
+            formatItem.innerHTML = `
+                <div class="format-info">
+                    <span class="format-quality">${icon} ${format.quality}${fpsText}</span>
+                    <div class="format-meta">
+                        <span>${format.ext.toUpperCase()}</span>
+                        ${sizeText ? `<span>${sizeText}</span>` : ''}
+                    </div>
+                </div>
+                <a href="${format.url}"
+                   class="format-download"
+                   target="_blank"
+                   rel="noopener"
+                   download="${title}.${format.ext}">
+                    ${isZh ? '下载' : 'Download'}
+                </a>
+            `;
+            return formatItem;
         }
         
         // Event listeners
