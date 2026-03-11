@@ -1,0 +1,14 @@
+{
+  "name": "590me-backend",
+  "version": "1.0.0",
+  "description": "590.me video downloader backend API",
+  "main": "api/parse.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "22.x"
+  }
+}

@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>590.me - Free Video Downloader | YouTube, TikTok, Instagram Download</title>
+    <meta name="description" content="Download videos from YouTube, TikTok, Instagram, Douyin free. No registration, HD quality up to 4K, fast and secure online video downloader supporting 1000+ sites.">
+    <meta name="keywords" content="video downloader, YouTube downloader, TikTok downloader, Instagram downloader, download YouTube videos, TikTok video download, online video downloader">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://590.me/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="590.me - Free Online Video Downloader">
+    <meta property="og:description" content="Download videos from YouTube, TikTok, Instagram and 1000+ sites. Free, no registration, HD quality.">
+    <meta property="og:url" content="https://590.me/">
+    <meta property="og:type" content="website">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="https://590.me/">
+    <link rel="alternate" hreflang="zh-CN" href="https://590.me/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://590.me/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "590.me",
+      "url": "https://590.me/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://590.me/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "590.me Video Downloader",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser, Windows, macOS, Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "12500"
+      },
+      "featureList": "YouTube download, TikTok download, Instagram download, 4K HD, batch download, no registration",
+      "softwareVersion": "3.0"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is 590.me video downloader free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 590.me is completely free to use. No registration required, no hidden fees. Download videos from YouTube, TikTok, Instagram and 1000+ sites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What video platforms are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support YouTube, TikTok, Instagram, Facebook, Twitter, Douyin, Bilibili, Vimeo, Dailymotion and 1000+ video platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What video quality is available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support all qualities from 360p up to 4K Ultra HD (2160p), depending on the original video source. You can choose MP4 or MP3 format."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        /* OKLCH Color System - Impeccable Style */
+        :root {
+            /* Primary palette - warm neutral with subtle tone */
+            --bg-primary: oklch(98% 0.005 80);
+            --bg-secondary: oklch(95% 0.01 80);
+            --bg-tertiary: oklch(92% 0.015 80);
+            
+            /* Text colors - warm grays, not pure gray */
+            --text-primary: oklch(25% 0.02 60);
+            --text-secondary: oklch(45% 0.03 60);
+            --text-tertiary: oklch(60% 0.025 60);
+            
+            /* Accent - muted coral/salmon */
+            --accent: oklch(55% 0.15 25);
+            --accent-hover: oklch(48% 0.16 25);
+            --accent-light: oklch(95% 0.03 25);
+            
+            /* Semantic */
+            --success: oklch(65% 0.15 145);
+            --border: oklch(85% 0.02 80);
+            --shadow: oklch(20% 0.02 80 / 0.08);
+            
+            /* Typography */
+            --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Instrument Serif', Georgia, serif;
+            
+            /* Spacing scale */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            
+            /* Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: oklch(18% 0.015 70);
+                --bg-secondary: oklch(23% 0.02 70);
+                --bg-tertiary: oklch(28% 0.025 70);
+                
+                --text-primary: oklch(95% 0.015 80);
+                --text-secondary: oklch(75% 0.02 80);
+                --text-tertiary: oklch(60% 0.018 80);
+                
+                --accent: oklch(65% 0.12 25);
+                --accent-hover: oklch(72% 0.13 25);
+                --accent-light: oklch(30% 0.04 25);
+                
+                --border: oklch(35% 0.03 70);
+                --shadow: oklch(5% 0.01 70 / 0.3);
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        /* Header */
+        header {
+            padding: var(--space-6) 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        .brand span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            gap: var(--space-8);
+            list-style: none;
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+        
+        .lang-toggle {
+            display: flex;
+            gap: var(--space-1);
+            padding: var(--space-1);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+        }
+        
+        .lang-btn {
+            padding: var(--space-2) var(--space-3);
+            border: none;
+            background: transparent;
+            color: var(--text-tertiary);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+        
+        .lang-btn.active {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            box-shadow: 0 1px 2px var(--shadow);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-24) 0 var(--space-16);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--space-6);
+            color: var(--text-primary);
+        }
+        
+        .hero h1 em {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 400;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto var(--space-10);
+            line-height: 1.6;
+        }
+        
+        /* Download Box */
+        .download-box {
+            max-width: 700px;
+            margin: 0 auto var(--space-8);
+        }
+        
+        .input-group {
+            display: flex;
+            gap: var(--space-3);
+            background: var(--bg-secondary);
+            padding: var(--space-2);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .input-group:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+        
+        .url-input {
+            flex: 1;
+            padding: var(--space-4) var(--space-5);
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .url-input::placeholder {
+            color: var(--text-tertiary);
+        }
+        
+        .btn-primary {
+            padding: var(--space-4) var(--space-8);
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+            white-space: nowrap;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        
+        /* Platforms */
+        .platforms {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-6);
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+        
+        .platforms span {
+            color: var(--text-secondary);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: var(--space-24) 0;
+            background: var(--bg-secondary);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-4);
+        }
+        
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+        }
+        
+        .feature {
+            padding: var(--space-8);
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-light);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-5);
+        }
+        
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        
+        .feature h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-3);
+        }
+        
+        .feature p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* Supported Platforms Section */
+        .supported-platforms {
+            padding: var(--space-24) 0;
+        }
+        
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+        }
+        
+        .platform-card {
+            padding: var(--space-8);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+        }
+        
+        .platform-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-3);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .platform-card h3 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        
+        .platform-card p {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-5);
+            line-height: 1.6;
+        }
+        
+        .platform-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            transition: gap 0.2s ease;
+        }
+        
+        .platform-link:hover {
+            gap: var(--space-3);
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: var(--space-24) 0;
+            background: var(--bg-secondary);
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto var(--space-5);
+        }
+        
+        .step h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+        }
+        
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+        
+        /* Desktop App Section */
+        .desktop-app {
+            padding: var(--space-24) 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+        }
+        
+        .desktop-app-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+        }
+        
+        .desktop-app-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-5);
+            line-height: 1.2;
+        }
+        
+        .desktop-app-text > p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            margin-bottom: var(--space-8);
+            line-height: 1.7;
+        }
+        
+        .desktop-app-features {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            margin-bottom: var(--space-8);
+        }
+        
+        .desktop-app-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            color: var(--text-secondary);
+        }
+        
+        .desktop-app-feature svg {
+            width: 20px;
+            height: 20px;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+        
+        .download-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-4) var(--space-6);
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+        
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .download-btn span {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.2;
+        }
+        
+        .download-btn small {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+        
+        .download-btn strong {
+            font-size: 1rem;
+        }
+        
+        .desktop-app-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .app-mockup {
+            width: 100%;
+            max-width: 480px;
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 25px 80px var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        
+        .app-mockup-header {
+            padding: var(--space-4) var(--space-5);
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .app-mockup-dots {
+            display: flex;
+            gap: var(--space-2);
+        }
+        
+        .app-mockup-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .app-mockup-dots span:nth-child(1) { background: #ff5f57; }
+        .app-mockup-dots span:nth-child(2) { background: #febc2e; }
+        .app-mockup-dots span:nth-child(3) { background: #28c840; }
+        
+        .app-mockup-content {
+            padding: var(--space-6);
+        }
+        
+        .mockup-input {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4) var(--space-5);
+            margin-bottom: var(--space-4);
+            color: var(--text-tertiary);
+            font-size: 0.9375rem;
+        }
+        
+        .mockup-button {
+            background: var(--accent);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-3) var(--space-5);
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: var(--space-5);
+        }
+        
+        .mockup-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+        
+        .mockup-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+        }
+        
+        .mockup-thumb {
+            width: 48px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+        }
+        
+        .mockup-info {
+            flex: 1;
+        }
+        
+        .mockup-title {
+            height: 12px;
+            width: 70%;
+            background: var(--border);
+            border-radius: 2px;
+            margin-bottom: 6px;
+        }
+        
+        .mockup-meta {
+            height: 8px;
+            width: 40%;
+            background: var(--bg-tertiary);
+            border-radius: 2px;
+        }
+        
+        .mockup-status {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mockup-status svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+        }
+        
+        @media (max-width: 900px) {
+            .desktop-app-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .desktop-app-features {
+                align-items: center;
+            }
+            
+            .download-buttons {
+                justify-content: center;
+            }
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: var(--space-24) 0;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .faq-question {
+            padding: var(--space-6) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--accent);
+        }
+        
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            color: var(--text-tertiary);
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: var(--space-6);
+        }
+        
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            padding: var(--space-16) 0 var(--space-8);
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: var(--space-12);
+            margin-bottom: var(--space-12);
+        }
+        
+        .footer-brand p {
+            color: var(--text-secondary);
+            margin-top: var(--space-4);
+            max-width: 300px;
+        }
+        
+        .footer-links h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-5);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-3);
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+        
+        /* Loading & Result States */
+        .loading-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-4);
+            padding: var(--space-8) 0;
+            color: var(--text-secondary);
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .error-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-6);
+            background: oklch(95% 0.05 25);
+            border-radius: var(--radius-lg);
+            color: var(--accent);
+            margin-top: var(--space-6);
+        }
+        
+        .error-state svg {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .video-result {
+            max-width: 700px;
+            margin: var(--space-8) auto 0;
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+        
+        .video-info {
+            display: flex;
+            gap: var(--space-5);
+            padding: var(--space-6);
+            background: var(--bg-secondary);
+        }
+        
+        .video-info img {
+            width: 160px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            flex-shrink: 0;
+        }
+        
+        .video-details {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .video-details h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .video-details p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: var(--space-2);
+        }
+        
+        .video-details span {
+            display: inline-block;
+            padding: var(--space-1) var(--space-3);
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+        }
+        
+        .download-options {
+            padding: var(--space-6);
+        }
+        
+        .download-options h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-secondary);
+        }
+        
+        .format-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+        
+        .format-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-4);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        
+        .format-item:hover {
+            border-color: var(--accent);
+            background: var(--bg-primary);
+        }
+        
+        .format-info {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+        
+        .format-quality {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .format-meta {
+            display: flex;
+            gap: var(--space-3);
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+        }
+        
+        .format-download {
+            padding: var(--space-2) var(--space-4);
+            background: var(--accent);
+            color: white;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+        
+        .format-download:hover {
+            background: var(--accent-hover);
+        }
+        
+        @media (max-width: 640px) {
+            .video-info {
+                flex-direction: column;
+            }
+            
+            .video-info img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
+            }
+            
+            .format-item {
+                flex-direction: column;
+                gap: var(--space-3);
+                align-items: stretch;
+            }
+            
+            .format-info {
+                justify-content: space-between;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--space-16) 0;
+            }
+            
+            .input-group {
+                flex-direction: column;
+            }
+            
+            .btn-primary {
+                width: 100%;
+            }
+            
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-8);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: var(--space-4);
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="brand">590<span>.</span>me</a>
+            <nav>
+                <ul>
+                    <li><a href="#features" data-en="Features" data-zh="功能">Features</a></li>
+                    <li><a href="#platforms" data-en="Platforms" data-zh="平台">Platforms</a></li>
+                    <li><a href="#how-it-works" data-en="How It Works" data-zh="使用方法">How It Works</a></li>
+                    <li><a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-en="Download videos from <em>anywhere</em>" data-zh="从<em>任何地方</em>下载视频">Download videos from <em>anywhere</em></h1>
+            <p class="hero-subtitle" data-en="Free online video downloader for YouTube, TikTok, Instagram, Douyin and 1000+ sites. No registration, HD quality up to 4K." data-zh="免费的YouTube、TikTok、Instagram、抖音等1000+网站视频下载器。无需注册，最高4K高清。">
+                Free online video downloader for YouTube, TikTok, Instagram, Douyin and 1000+ sites. No registration, HD quality up to 4K.
+            </p>
+            
+            <div class="download-box">
+                <div class="input-group">
+                    <input type="url" id="videoUrl" class="url-input" placeholder="Paste video URL here..." data-placeholder-en="Paste video URL here..." data-placeholder-zh="粘贴视频链接...">
+                    <button id="parseBtn" class="btn-primary" data-en="Download" data-zh="下载">Download</button>
+                </div>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state" style="display: none;">
+                <div class="spinner"></div>
+                <p data-en="Parsing video..." data-zh="正在解析视频...">Parsing video...</p>
+            </div>
+            
+            <!-- Error State -->
+            <div id="errorState" class="error-state" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <p id="errorMessage"></p>
+            </div>
+            
+            <!-- Video Result -->
+            <div id="videoResult" class="video-result" style="display: none;">
+                <div class="video-info">
+                    <img id="videoThumbnail" src="" alt="Video thumbnail">
+                    <div class="video-details">
+                        <h3 id="videoTitle"></h3>
+                        <p id="videoUploader"></p>
+                        <span id="videoDuration"></span>
+                    </div>
+                </div>
+                <div class="download-options">
+                    <h4 data-en="Select quality:" data-zh="选择画质：">Select quality:</h4>
+                    <div id="formatList" class="format-list"></div>
+                </div>
+            </div>
+            
+            <div class="platforms">
+                <span data-en="Supports:" data-zh="支持：">Supports:</span>
+                YouTube • TikTok • Instagram • Douyin • Bilibili • +1000 more
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Why choose 590.me?" data-zh="为什么选择590.me？">Why choose 590.me?</h2>
+                <p data-en="Everything you need in a video downloader" data-zh="视频下载器所需的一切">Everything you need in a video downloader</p>
+            </div>
+            
+            <div class="features-grid">
+                <article class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 data-en="Lightning Fast" data-zh="闪电速度">Lightning Fast</h3>
+                    <p data-en="Multi-threaded downloads with optimized servers. Get your videos in seconds, not minutes." data-zh="多线程下载，优化服务器。几秒钟而非几分钟获取视频。">Multi-threaded downloads with optimized servers. Get your videos in seconds, not minutes.</p>
+                </article>
+                
+                <article class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 data-en="HD & 4K Quality" data-zh="高清和4K画质">HD & 4K Quality</h3>
+                    <p data-en="Download in any quality from 360p to 4K Ultra HD. Keep the original video quality intact." data-zh="从360p到4K超高清任意画质下载。保持原视频质量。">Download in any quality from 360p to 4K Ultra HD. Keep the original video quality intact.</p>
+                </article>
+                
+                <article class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 data-en="100% Private" data-zh="100%私密">100% Private</h3>
+                    <p data-en="No registration required. We don't store your history or personal data. Your privacy matters." data-zh="无需注册。我们不存储您的历史或个人数据。您的隐私很重要。">No registration required. We don't store your history or personal data. Your privacy matters.</p>
+                </article>
+                
+                <article class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3 data-en="Batch Download" data-zh="批量下载">Batch Download</h3>
+                    <p data-en="Download entire playlists or multiple videos at once. Save time with our smart queue system." data-zh="一次下载整个播放列表或多个视频。通过智能队列系统节省时间。">Download entire playlists or multiple videos at once. Save time with our smart queue system.</p>
+                </article>
+                
+                <article class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 data-en="Universal Support" data-zh="通用支持">Universal Support</h3>
+                    <p data-en="Works with YouTube, TikTok, Instagram, Facebook, Twitter, Douyin, Bilibili and 1000+ more." data-zh="支持YouTube、TikTok、Instagram、Facebook、Twitter、抖音、Bilibili等1000+平台。">Works with YouTube, TikTok, Instagram, Facebook, Twitter, Douyin, Bilibili and 1000+ more.</p>
+                </article>
+                
+                <article class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3 data-en="Completely Free" data-zh="完全免费">Completely Free</h3>
+                    <p data-en="No hidden fees, no premium tiers. All features are free for everyone, forever." data-zh="无隐藏费用，无高级套餐。所有功能对所有人永久免费。">No hidden fees, no premium tiers. All features are free for everyone, forever.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Platforms -->
+    <section class="supported-platforms" id="platforms">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Supported Platforms" data-zh="支持的平台">Supported Platforms</h2>
+                <p data-en="Download from all major video platforms" data-zh="从所有主流视频平台下载">Download from all major video platforms</p>
+            </div>
+            
+            <div class="platforms-grid">
+                <article class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                        YouTube Downloader
+                    </h3>
+                    <p data-en="Download YouTube videos, playlists, and Shorts in MP4 or MP3 format. Support for 1080p, 2K, and 4K quality." data-zh="下载YouTube视频、播放列表和Shorts。支持MP4或MP3格式，1080p、2K和4K画质。">Download YouTube videos, playlists, and Shorts in MP4 or MP3 format. Support for 1080p, 2K, and 4K quality.</p>
+                    <a href="/youtube-downloader/" class="platform-link" data-en="Download YouTube videos →" data-zh="下载YouTube视频 →">Download YouTube videos →</a>
+                </article>
+                
+                <article class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                        </svg>
+                        TikTok Downloader
+                    </h3>
+                    <p data-en="Download TikTok videos without watermark. Support for batch downloading all videos from a user profile." data-zh="无水印下载TikTok视频。支持批量下载用户所有视频。">Download TikTok videos without watermark. Support for batch downloading all videos from a user profile.</p>
+                    <a href="/tiktok-downloader/" class="platform-link" data-en="Download TikTok videos →" data-zh="下载TikTok视频 →">Download TikTok videos →</a>
+                </article>
+                
+                <article class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        Instagram Downloader
+                    </h3>
+                    <p data-en="Download Instagram videos, Reels, and Stories. High-quality downloads with original resolution preserved." data-zh="下载Instagram视频、Reels和Stories。高清下载，保留原始分辨率。">Download Instagram videos, Reels, and Stories. High-quality downloads with original resolution preserved.</p>
+                    <a href="/instagram-downloader/" class="platform-link" data-en="Download Instagram videos →" data-zh="下载Instagram视频 →">Download Instagram videos →</a>
+                </article>
+                
+                <article class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        Douyin Downloader
+                    </h3>
+                    <p data-en="Download Chinese TikTok (Douyin) videos without watermark. Fast and reliable service for Douyin content." data-zh="无水印下载抖音视频。为抖音内容提供快速可靠的服务。">Download Chinese TikTok (Douyin) videos without watermark. Fast and reliable service for Douyin content.</p>
+                    <a href="/douyin-downloader/" class="platform-link" data-en="Download Douyin videos →" data-zh="下载抖音视频 →">Download Douyin videos →</a>
+                </article>
+                
+                <article class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        Bilibili Downloader
+                    </h3>
+                    <p data-en="Download Bilibili videos in high quality. Support for various resolutions including 1080p and 4K when available." data-zh="高清下载Bilibili视频。支持多种分辨率，包括1080p和4K（如有）。">Download Bilibili videos in high quality. Support for various resolutions including 1080p and 4K when available.</p>
+                    <a href="/bilibili-downloader/" class="platform-link" data-en="Download Bilibili videos →" data-zh="下载Bilibili视频 →">Download Bilibili videos →</a>
+                </article>
+                
+                <article class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                        More Platforms
+                    </h3>
+                    <p data-en="We support Facebook, Twitter, Vimeo, Dailymotion, Reddit, and 1000+ other video platforms. If it has a video, we can download it." data-zh="我们支持Facebook、Twitter、Vimeo、Dailymotion、Reddit和1000+其他视频平台。只要有视频，我们就能下载。">We support Facebook, Twitter, Vimeo, Dailymotion, Reddit, and 1000+ other video platforms. If it has a video, we can download it.</p>
+                    <a href="/supported-sites/" class="platform-link" data-en="View all supported sites →" data-zh="查看所有支持的网站 →">View all supported sites →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="How to download videos" data-zh="如何下载视频">How to download videos</h2>
+                <p data-en="3 simple steps to get your videos" data-zh="3个简单步骤获取视频">3 simple steps to get your videos</p>
+            </div>
+            
+            <div class="steps">
+                <article class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-en="Copy the URL" data-zh="复制链接">Copy the URL</h3>
+                    <p data-en="Find the video you want to download on YouTube, TikTok, or any supported platform. Copy the link from your browser's address bar." data-zh="在YouTube、TikTok或任何支持的平台上找到您想下载的视频。从浏览器地址栏复制链接。">Find the video you want to download on YouTube, TikTok, or any supported platform. Copy the link from your browser's address bar.</p>
+                </article>
+                
+                <article class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-en="Paste & Parse" data-zh="粘贴并解析">Paste & Parse</h3>
+                    <p data-en="Paste the URL into the input box above and click the Download button. We'll analyze the video and show available quality options." data-zh="将URL粘贴到上方输入框，点击下载按钮。我们将分析视频并显示可用画质选项。">Paste the URL into the input box above and click the Download button. We'll analyze the video and show available quality options.</p>
+                </article>
+                
+                <article class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-en="Download" data-zh="下载">Download</h3>
+                    <p data-en="Select your preferred quality and format, then click download. Your video will be saved to your device in seconds." data-zh="选择您偏好的画质和格式，然后点击下载。您的视频将在几秒钟内保存到设备。">Select your preferred quality and format, then click download. Your video will be saved to your device in seconds.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desktop App Section -->
+    <section class="desktop-app" id="desktop-app">
+        <div class="container">
+            <div class="desktop-app-content">
+                <div class="desktop-app-text">
+                    <h2 data-en="Get the desktop app" data-zh="下载桌面客户端">Get the desktop app</h2>
+                    <p data-en="Download videos faster with our desktop application. Batch download entire playlists, convert formats, and manage your downloads with ease." data-zh="使用我们的桌面应用程序更快地下载视频。批量下载整个播放列表，转换格式，轻松管理下载。">Download videos faster with our desktop application. Batch download entire playlists, convert formats, and manage your downloads with ease.</p>
+                    
+                    <div class="desktop-app-features">
+                        <div class="desktop-app-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-en="10x faster download speed" data-zh="10倍下载速度">10x faster download speed</span>
+                        </div>
+                        <div class="desktop-app-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-en="Batch download unlimited videos" data-zh="批量下载无限视频">Batch download unlimited videos</span>
+                        </div>
+                        <div class="desktop-app-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-en="Built-in video converter" data-zh="内置视频转换器">Built-in video converter</span>
+                        </div>
+                        <div class="desktop-app-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-en="Download history & management" data-zh="下载历史和管理">Download history & management</span>
+                        </div>
+                    </div>
+                    
+                    <div class="download-buttons">
+                        <a href="/download/windows" class="download-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                            </svg>
+                            <span>
+                                <small data-en="Download for" data-zh="下载">Download for</small>
+                                <strong>Windows</strong>
+                            </span>
+                        </a>
+                        <a href="/download/mac" class="download-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            <span>
+                                <small data-en="Download for" data-zh="下载">Download for</small>
+                                <strong>macOS</strong>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="desktop-app-visual">
+                    <div class="app-mockup">
+                        <div class="app-mockup-header">
+                            <div class="app-mockup-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="app-mockup-content">
+                            <div class="mockup-input">https://youtube.com/watch?v=...</div>
+                            <div class="mockup-button" data-en="Download Video" data-zh="下载视频">Download Video</div>
+                            <div class="mockup-list">
+                                <div class="mockup-item">
+                                    <div class="mockup-thumb"></div>
+                                    <div class="mockup-info">
+                                        <div class="mockup-title"></div>
+                                        <div class="mockup-meta"></div>
+                                    </div>
+                                    <div class="mockup-status">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="7 10 12 15 17 10"></polyline>
+                                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mockup-item">
+                                    <div class="mockup-thumb"></div>
+                                    <div class="mockup-info">
+                                        <div class="mockup-title"></div>
+                                        <div class="mockup-meta"></div>
+                                    </div>
+                                    <div class="mockup-status">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="7 10 12 15 17 10"></polyline>
+                                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mockup-item">
+                                    <div class="mockup-thumb"></div>
+                                    <div class="mockup-info">
+                                        <div class="mockup-title"></div>
+                                        <div class="mockup-meta"></div>
+                                    </div>
+                                    <div class="mockup-status">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="7 10 12 15 17 10"></polyline>
+                                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Frequently asked questions" data-zh="常见问题">Frequently asked questions</h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-en="Is 590.me free to use?" data-zh="590.me是免费的吗？">Is 590.me free to use?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, 590.me is completely free. No registration required, no hidden fees, no premium tiers. All features are available to everyone." data-zh="是的，590.me完全免费。无需注册，无隐藏费用，无高级套餐。所有功能对所有人开放。">Yes, 590.me is completely free. No registration required, no hidden fees, no premium tiers. All features are available to everyone.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-en="What video quality can I download?" data-zh="可以下载什么画质？">What video quality can I download?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="We support all qualities available on the source platform, from 360p up to 4K Ultra HD (2160p). You can choose MP4 for video or MP3 for audio-only downloads." data-zh="我们支持源平台上所有可用画质，从360p到4K超高清(2160p)。您可以选择MP4视频或MP3纯音频下载。">We support all qualities available on the source platform, from 360p up to 4K Ultra HD (2160p). You can choose MP4 for video or MP3 for audio-only downloads.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-en="Is it legal to download videos?" data-zh="下载视频合法吗？">Is it legal to download videos?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="590.me is intended for downloading videos you have permission to download, such as your own content or public domain videos. Please respect copyright laws and the terms of service of each platform." data-zh="590.me旨在下载您有权下载的视频，例如您自己的内容或公共领域视频。请尊重版权法和各平台的服务条款。">590.me is intended for downloading videos you have permission to download, such as your own content or public domain videos. Please respect copyright laws and the terms of service of each platform.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-en="Do I need to install software?" data-zh="需要安装软件吗？">Do I need to install software?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="No installation needed. 590.me works entirely in your web browser. It works on Windows, Mac, Android, iOS, and any device with a modern browser." data-zh="无需安装。590.me完全在您的网络浏览器中运行。支持Windows、Mac、Android、iOS和任何带有现代浏览器的设备。">No installation needed. 590.me works entirely in your web browser. It works on Windows, Mac, Android, iOS, and any device with a modern browser.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-en="Is my data safe?" data-zh="我的数据安全吗？">Is my data safe?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Absolutely. We don't store your download history or personal information. All processing happens in real-time, and we never keep copies of downloaded videos." data-zh="绝对安全。我们不存储您的下载历史或个人信息。所有处理都是实时的，我们从不保留下载视频的副本。">Absolutely. We don't store your download history or personal information. All processing happens in real-time, and we never keep copies of downloaded videos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="brand">590<span>.</span>me</a>
+                    <p data-en="Free online video downloader for YouTube, TikTok, Instagram and 1000+ sites. Fast, secure, and completely free." data-zh="免费的YouTube、TikTok、Instagram和1000+网站在线视频下载器。快速、安全、完全免费。">Free online video downloader for YouTube, TikTok, Instagram and 1000+ sites. Fast, secure, and completely free.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Product" data-zh="产品">Product</h4>
+                    <ul>
+                        <li><a href="/youtube-downloader/" data-en="YouTube Downloader" data-zh="YouTube下载器">YouTube Downloader</a></li>
+                        <li><a href="/tiktok-downloader/" data-en="TikTok Downloader" data-zh="TikTok下载器">TikTok Downloader</a></li>
+                        <li><a href="/instagram-downloader/" data-en="Instagram Downloader" data-zh="Instagram下载器">Instagram Downloader</a></li>
+                        <li><a href="/douyin-downloader/" data-en="Douyin Downloader" data-zh="抖音下载器">Douyin Downloader</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Support" data-zh="支持">Support</h4>
+                    <ul>
+                        <li><a href="/how-to-download/" data-en="How to Download" data-zh="如何下载">How to Download</a></li>
+                        <li><a href="/faq/" data-en="FAQ" data-zh="常见问题">FAQ</a></li>
+                        <li><a href="/contact/" data-en="Contact Us" data-zh="联系我们">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Legal" data-zh="法律">Legal</h4>
+                    <ul>
+                        <li><a href="/privacy/" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a></li>
+                        <li><a href="/terms/" data-en="Terms of Service" data-zh="服务条款">Terms of Service</a></li>
+                        <li><a href="/dmca/" data-en="DMCA" data-zh="DMCA">DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 590.me. All rights reserved.</p>
+                <p>Made with care for video lovers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching
+        const langBtns = document.querySelectorAll('.lang-btn');
+        const urlInput = document.querySelector('.url-input');
+        
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                langBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const lang = btn.dataset.lang;
+                document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+                
+                // Update all elements with data-en and data-zh
+                document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+                    el.textContent = el.dataset[lang];
+                });
+                
+                // Update placeholder
+                if (urlInput) {
+                    urlInput.placeholder = urlInput.dataset[`placeholder${lang.charAt(0).toUpperCase() + lang.slice(1)}`];
+                }
+            });
+        });
+        
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // API Configuration
+        const API_BASE_URL = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3000/api' 
+            : 'https://590me-cky9iz38m-cheaks-projects.vercel.app/api';
+        
+        // Parse video function
+        async function parseVideo() {
+            const urlInput = document.getElementById('videoUrl');
+            const parseBtn = document.getElementById('parseBtn');
+            const loadingState = document.getElementById('loadingState');
+            const errorState = document.getElementById('errorState');
+            const videoResult = document.getElementById('videoResult');
+            
+            const url = urlInput.value.trim();
+            
+            if (!url) {
+                urlInput.focus();
+                urlInput.style.borderColor = 'var(--accent)';
+                setTimeout(() => {
+                    urlInput.style.borderColor = '';
+                }, 1000);
+                return;
+            }
+            
+            // Reset states
+            errorState.style.display = 'none';
+            videoResult.style.display = 'none';
+            loadingState.style.display = 'flex';
+            parseBtn.disabled = true;
+            parseBtn.textContent = document.documentElement.lang === 'zh-CN' ? '解析中...' : 'Parsing...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/parse`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ url })
+                });
+                
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to parse video');
+                }
+                
+                // Display result
+                displayVideoResult(data);
+                
+            } catch (error) {
+                console.error('Parse error:', error);
+                errorState.style.display = 'flex';
+                document.getElementById('errorMessage').textContent = error.message;
+            } finally {
+                loadingState.style.display = 'none';
+                parseBtn.disabled = false;
+                parseBtn.textContent = document.documentElement.lang === 'zh-CN' ? '下载' : 'Download';
+            }
+        }
+        
+        function displayVideoResult(data) {
+            const videoResult = document.getElementById('videoResult');
+            const videoThumbnail = document.getElementById('videoThumbnail');
+            const videoTitle = document.getElementById('videoTitle');
+            const videoUploader = document.getElementById('videoUploader');
+            const videoDuration = document.getElementById('videoDuration');
+            const formatList = document.getElementById('formatList');
+            
+            // Set video info
+            videoThumbnail.src = data.thumbnail || '';
+            videoTitle.textContent = data.title || 'Unknown';
+            videoUploader.textContent = data.uploader || '';
+            
+            // Format duration
+            if (data.duration) {
+                const mins = Math.floor(data.duration / 60);
+                const secs = Math.floor(data.duration % 60);
+                videoDuration.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+            } else {
+                videoDuration.style.display = 'none';
+            }
+            
+            // Generate format list
+            formatList.innerHTML = '';
+            
+            if (data.formats && data.formats.length > 0) {
+                data.formats.forEach(format => {
+                    const formatItem = document.createElement('div');
+                    formatItem.className = 'format-item';
+                    
+                    const sizeText = format.size 
+                        ? `(${(format.size / 1024 / 1024).toFixed(1)} MB)` 
+                        : '';
+                    
+                    formatItem.innerHTML = `
+                        <div class="format-info">
+                            <span class="format-quality">${format.quality}</span>
+                            <div class="format-meta">
+                                <span>${format.resolution}</span>
+                                <span>${format.ext.toUpperCase()}</span>
+                                <span>${sizeText}</span>
+                            </div>
+                        </div>
+                        <a href="${format.url}" 
+                           class="format-download" 
+                           target="_blank"
+                           download="${data.title}.${format.ext}">
+                            ${document.documentElement.lang === 'zh-CN' ? '下载' : 'Download'}
+                        </a>
+                    `;
+                    
+                    formatList.appendChild(formatItem);
+                });
+            } else {
+                formatList.innerHTML = '<p style="color: var(--text-tertiary); text-align: center;">No downloadable formats found.</p>';
+            }
+            
+            videoResult.style.display = 'block';
+            videoResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Event listeners
+        document.getElementById('parseBtn').addEventListener('click', parseVideo);
+        
+        document.getElementById('videoUrl').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                parseVideo();
+            }
+        });
+    </script>
+</body>
+</html>
